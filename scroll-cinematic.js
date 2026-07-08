@@ -82,6 +82,7 @@
       }
       el.style.opacity = o.toFixed(3);
       el.style.transform = "translateY(" + ((1 - o) * 24).toFixed(1) + "px)";
+      el.style.pointerEvents = o > 0.4 ? "" : "none"; // hidden cards must not eat clicks
     }
   }
 

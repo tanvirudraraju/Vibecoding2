@@ -3,8 +3,8 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>vastra — Woven for the moments that matter</title>
-<meta name="description" content="Vastra — Indian ethnic wear, handwoven by 1,200+ artisan partners across six living weaving traditions.">
+<title>vastra — Elevated ethnic, every day</title>
+<meta name="description" content="Vastra — elevated Indian ethnic daily wear for women, men and kids. Handwoven, naturally dyed, made to measure.">
 <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Crect width='32' height='32' rx='7' fill='%23a63c06'/%3E%3Ctext x='16' y='23' font-family='Georgia' font-size='20' fill='%23f5eedd' text-anchor='middle'%3Ev%3C/text%3E%3C/svg%3E">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -13,53 +13,152 @@
 </head>
 <body>
 
-<header class="nav">
-  <a class="logo" href="#hero">vastra</a>
-  <nav class="nav-links">
-    <a href="#story">Story</a>
-    <a href="#collections">Collections</a>
-    <a href="#craft">Craft</a>
-    <a href="#atelier">Atelier</a>
-  </nav>
-  <a class="nav-cta" href="#collections">Shop the Edit</a>
-</header>
+<div class="marquee"><div class="marquee-track">
+  <span>Free shipping over ₹1,999</span><span>✦</span><span>The Festive Edit ’26 is live</span><span>✦</span>
+  <span>Complimentary tailoring on festive pieces</span><span>✦</span><span>Easy 30-day returns</span><span>✦</span>
+  <span>Free shipping over ₹1,999</span><span>✦</span><span>The Festive Edit ’26 is live</span><span>✦</span>
+  <span>Complimentary tailoring on festive pieces</span><span>✦</span><span>Easy 30-day returns</span><span>✦</span>
+</div></div>
 
-<!-- ═══ SCRUB 1 · HERO ═══ -->
-<section id="hero" class="scrub">
+<header class="nav">
+  <a class="logo" href="#opening">vastra</a>
+  <nav class="nav-links">
+    <a class="active" href="#women">Women</a>
+    <a href="#men">Men</a>
+    <a href="#kids">Kids</a>
+    <a class="icon" href="#opening" aria-label="Home">⌂</a>
+    <a class="icon" href="#categories" aria-label="Search">⌕</a>
+  </nav>
+  <div class="nav-right">
+    <a class="nav-cta" href="#finale">Sign In</a>
+    <button class="cart-btn" id="cartBtn" aria-label="Cart">🛒<span class="cart-count" id="cartCount">0</span></button>
+  </div>
+</header>
+<div class="subnav">
+  <a href="#categories">Categories</a>
+  <a href="#story">Brands</a>
+</div>
+
+<!-- ═══ OPENING · cinematic scrub of the brand film ═══ -->
+<section id="opening" class="scrub">
   <div class="stage">
-    <canvas></canvas>
-    <div class="overlay">
-      <div data-in="0" data-out="0.22">
-        <p class="kicker">The Festive Edit ’26</p>
-        <h1>vastra</h1>
-        <p>Woven for the moments that matter.</p>
-        <span class="cta"><a class="btn" href="#collections">Shop Now</a></span>
+    <div class="frame-card">
+      <canvas></canvas>
+      <div class="overlay">
+        <div data-in="0" data-out="0.2">
+          <p class="kicker">Elevated ethnic · every day</p>
+          <h1>vastra</h1>
+          <p>Woven for the moments that matter — and the ones in between.</p>
+          <span class="cta"><a class="btn" href="#categories">Shop Now</a></span>
+        </div>
+        <div data-in="0.26" data-out="0.46">
+          <h2>Morning pooja to<br>midnight shaadi</h2>
+          <p>One wardrobe, every occasion. Handloom that moves with your day.</p>
+        </div>
+        <div data-in="0.52" data-out="0.72">
+          <h2>Lit by diyas,<br>draped in heritage</h2>
+          <p>Natural dyes. Real zari. Six living weaving traditions.</p>
+        </div>
+        <div data-in="0.78" data-out="1">
+          <p class="kicker">The Festive Edit ’26</h2>
+          <h2>This season,<br>wear the light</h2>
+          <span class="cta"><a class="btn" href="#women">Explore Women</a>
+          <a class="btn ghost" href="#men">Explore Men</a></span>
+        </div>
+        <span class="scroll-hint">Scroll</span>
       </div>
-      <div data-in="0.28" data-out="0.5">
-        <h2>Silk that remembers<br>a thousand hands</h2>
-        <p>Every drape begins on a handloom — never a machine, never a shortcut.</p>
-      </div>
-      <div data-in="0.56" data-out="0.78">
-        <h2>Dyed in turmeric,<br>madder &amp; indigo</h2>
-        <p>Natural pigments, drawn the way they have been for four centuries.</p>
-      </div>
-      <div data-in="0.84" data-out="1">
-        <h2>Heritage,<br>cut for now</h2>
-        <p>Silhouettes tailored for the way you move today.</p>
-      </div>
-      <span class="scroll-hint">Scroll</span>
     </div>
   </div>
 </section>
 
-<!-- ═══ STORY ═══ -->
+<!-- ═══ SHOP BY CATEGORY ═══ -->
+<section id="categories" class="content">
+  <div class="wrap">
+    <div class="section-head">
+      <div>
+        <p class="eyebrow reveal">Shop by Category</p>
+        <h2 class="reveal d1">Find your drape</h2>
+      </div>
+      <a class="link reveal d2" href="#women">View all →</a>
+    </div>
+    <div class="cat-grid" id="catGrid">
+      <!-- thumbs are swapped for Higgsfield photos by app.js when present -->
+      <a class="cat-card reveal" href="#women" data-cat="kurta">
+        <div class="thumb"><svg viewBox="0 0 300 340"><rect width="300" height="340" fill="#e9dcc0"/><path d="M150 60c50 25 66 75 50 125s-75 66-100 33-16-91 17-124 16-42 33-34z" fill="none" stroke="#a63c06" stroke-width="2.5"/><circle cx="150" cy="180" r="7" fill="#a63c06"/></svg></div>
+        <div class="bar"><span>Kurta</span><span>→</span></div>
+      </a>
+      <a class="cat-card reveal d1" href="#women" data-cat="lehenga">
+        <div class="thumb"><svg viewBox="0 0 300 340"><rect width="300" height="340" fill="#f0e2c8"/><path d="M150 50 70 300h160z" fill="none" stroke="#a63c06" stroke-width="2.5"/><path d="M150 50 110 300M150 50l40 250" stroke="#c99a4e" stroke-width="1.4"/></svg></div>
+        <div class="bar"><span>Skirts &amp; Lehenga</span><span>→</span></div>
+      </a>
+      <a class="cat-card reveal d2" href="#women" data-cat="saree">
+        <div class="thumb"><svg viewBox="0 0 300 340"><rect width="300" height="340" fill="#e6d5b8"/><path d="M50 300C100 190 200 190 250 300M75 260C120 175 180 175 225 260" fill="none" stroke="#a63c06" stroke-width="2.5"/><circle cx="150" cy="110" r="24" fill="none" stroke="#c99a4e" stroke-width="1.6"/></svg></div>
+        <div class="bar"><span>Saree</span><span>→</span></div>
+      </a>
+      <a class="cat-card reveal d3" href="#women" data-cat="salwar">
+        <div class="thumb"><svg viewBox="0 0 300 340"><rect width="300" height="340" fill="#eee0c4"/><rect x="90" y="55" width="120" height="230" rx="55" fill="none" stroke="#a63c06" stroke-width="2.5"/><path d="M90 170h120M150 55v230" stroke="#c99a4e" stroke-width="1.3"/></svg></div>
+        <div class="bar"><span>Salwar Suit</span><span>→</span></div>
+      </a>
+      <a class="cat-card reveal d1" href="#women" data-cat="dupatta">
+        <div class="thumb"><svg viewBox="0 0 300 340"><rect width="300" height="340" fill="#f1e4ca"/><path d="M40 60q110 80 0 220M260 60q-110 80 0 220M150 35v270" fill="none" stroke="#a63c06" stroke-width="2.2"/></svg></div>
+        <div class="bar"><span>Dupatta</span><span>→</span></div>
+      </a>
+      <a class="cat-card reveal d2" href="#women" data-cat="accessories">
+        <div class="thumb"><svg viewBox="0 0 300 340"><rect width="300" height="340" fill="#e9dcc0"/><circle cx="150" cy="150" r="60" fill="none" stroke="#c99a4e" stroke-width="2.5"/><circle cx="150" cy="245" r="26" fill="none" stroke="#a63c06" stroke-width="2"/><circle cx="150" cy="150" r="6" fill="#a63c06"/></svg></div>
+        <div class="bar"><span>Accessories</span><span>→</span></div>
+      </a>
+      <a class="cat-card reveal d3" href="#women" data-cat="shoes">
+        <div class="thumb"><svg viewBox="0 0 300 340"><rect width="300" height="340" fill="#efe1c6"/><ellipse cx="150" cy="190" rx="72" ry="105" fill="none" stroke="#a63c06" stroke-width="2.5"/><path d="M150 85q34 52 0 105t0 105" fill="none" stroke="#c99a4e" stroke-width="1.6"/></svg></div>
+        <div class="bar"><span>Shoes</span><span>→</span></div>
+      </a>
+    </div>
+  </div>
+</section>
+
+<!-- ═══ WOMEN · 3D product scroll ═══ -->
+<section id="women" class="scrub">
+  <div class="stage">
+    <span class="section-badge">Women · The Festive Edit</span>
+    <canvas></canvas>
+    <div class="overlay">
+      <div data-in="0" data-out="0.18">
+        <p class="kicker">Women</p>
+        <h2>The drape,<br>in motion</h2>
+        <p>Scroll to walk the collection.</p>
+      </div>
+      <div class="product-card pos-left" data-in="0.24" data-out="0.44">
+        <span class="tag">Bestseller</span>
+        <h3>Sunehri Anarkali</h3>
+        <p class="desc">Burnt-orange silk, hand-zari florals. Pooja to party without a change.</p>
+        <div class="row"><span class="price"><s>₹7,490</s>₹5,990</span>
+          <button class="add-btn" data-name="Sunehri Anarkali">Add to Bag</button></div>
+      </div>
+      <div class="product-card pos-right" data-in="0.5" data-out="0.7">
+        <span class="tag">New in</span>
+        <h3>Champagne Organza Dupatta</h3>
+        <p class="desc">Featherweight, zari-edged. The one layer that finishes everything.</p>
+        <div class="row"><span class="price">₹2,290</span>
+          <button class="add-btn" data-name="Champagne Organza Dupatta">Add to Bag</button></div>
+      </div>
+      <div class="product-card pos-left" data-in="0.76" data-out="1">
+        <span class="tag">Daily wear</span>
+        <h3>Jaipur Block-Print Kurta</h3>
+        <p class="desc">Breathable mul cotton, natural madder dye. Office-to-evening ease.</p>
+        <div class="row"><span class="price">₹2,490</span>
+          <button class="add-btn" data-name="Jaipur Block-Print Kurta">Add to Bag</button></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ═══ STORY / BRAND ═══ -->
 <section id="story" class="content">
   <div class="wrap">
     <p class="eyebrow reveal">Our Story</p>
     <h2 class="reveal d1">Clothing is memory you can wear.</h2>
-    <p class="lede reveal d2">Vastra partners directly with weaving families across India —
-      from the brocade lofts of Varanasi to the ikat pits of Pochampally — bringing
-      ceremonial craft into everyday wardrobes without diluting a single thread of it.</p>
+    <p class="lede reveal d2">Vastra partners directly with weaving families across India — from the
+      brocade lofts of Varanasi to the ikat pits of Pochampally — bringing ceremonial craft into
+      everyday wardrobes without diluting a single thread of it.</p>
     <div class="stats">
       <div class="stat reveal"><b>1,200+</b><span>artisan partners</span></div>
       <div class="stat reveal d1"><b>28</b><span>handloom clusters</span></div>
@@ -69,63 +168,77 @@
   </div>
 </section>
 
-<!-- ═══ COLLECTIONS ═══ -->
-<section id="collections" class="content collections">
-  <div class="wrap">
-    <p class="eyebrow reveal">Shop by Category</p>
-    <h2 class="reveal d1">The Collections</h2>
-    <div class="grid">
-      <a class="card reveal" href="#" style="background:linear-gradient(165deg,#8a3a10,#4a1e08)">
-        <svg class="motif" viewBox="0 0 300 360" preserveAspectRatio="xMidYMid slice"><path d="M150 60c60 30 80 90 60 150s-90 80-120 40 -20-110 20-150 20-50 40-40z" fill="none" stroke="#e8c98a" stroke-width="2"/><circle cx="150" cy="200" r="34" fill="none" stroke="#e8c98a" stroke-width="1.4"/><circle cx="150" cy="200" r="8" fill="#e8c98a"/></svg>
-        <span class="arrow">→</span><h3>Kurta</h3><p>Chikankari &amp; brocade</p>
-      </a>
-      <a class="card reveal d1" href="#" style="background:linear-gradient(165deg,#6d2c1a,#38120c)">
-        <svg class="motif" viewBox="0 0 300 360" preserveAspectRatio="xMidYMid slice"><path d="M40 320C90 200 210 200 260 320M60 280C110 180 190 180 240 280M85 245C120 170 180 170 215 245" fill="none" stroke="#e8c98a" stroke-width="2"/><circle cx="150" cy="120" r="26" fill="none" stroke="#e8c98a" stroke-width="1.4"/></svg>
-        <span class="arrow">→</span><h3>Saree</h3><p>Banarasi &amp; Kanjivaram</p>
-      </a>
-      <a class="card reveal d2" href="#" style="background:linear-gradient(165deg,#93571a,#4d2a0a)">
-        <svg class="motif" viewBox="0 0 300 360" preserveAspectRatio="xMidYMid slice"><path d="M150 40 60 330h180z" fill="none" stroke="#e8c98a" stroke-width="2"/><path d="M150 40 105 330M150 40l45 290" fill="none" stroke="#e8c98a" stroke-width="1.2"/><circle cx="150" cy="40" r="12" fill="#e8c98a"/></svg>
-        <span class="arrow">→</span><h3>Lehenga</h3><p>Bridal &amp; festive</p>
-      </a>
-      <a class="card reveal" href="#" style="background:linear-gradient(165deg,#7c3d22,#3f1c10)">
-        <svg class="motif" viewBox="0 0 300 360" preserveAspectRatio="xMidYMid slice"><rect x="85" y="60" width="130" height="240" rx="60" fill="none" stroke="#e8c98a" stroke-width="2"/><path d="M85 180h130M150 60v240" stroke="#e8c98a" stroke-width="1.2"/></svg>
-        <span class="arrow">→</span><h3>Salwar Suit</h3><p>Everyday elegance</p>
-      </a>
-      <a class="card reveal d1" href="#" style="background:linear-gradient(165deg,#a3651c,#5a350e)">
-        <svg class="motif" viewBox="0 0 300 360" preserveAspectRatio="xMidYMid slice"><path d="M30 60q120 90 0 240M270 60q-120 90 0 240M150 30v300" fill="none" stroke="#e8c98a" stroke-width="2"/></svg>
-        <span class="arrow">→</span><h3>Dupatta</h3><p>Zari-edged organza</p>
-      </a>
-      <a class="card reveal d2" href="#" style="background:linear-gradient(165deg,#66301f,#331410)">
-        <svg class="motif" viewBox="0 0 300 360" preserveAspectRatio="xMidYMid slice"><ellipse cx="150" cy="210" rx="85" ry="120" fill="none" stroke="#e8c98a" stroke-width="2"/><path d="M150 90q40 60 0 120t0 120" fill="none" stroke="#e8c98a" stroke-width="1.4"/><circle cx="150" cy="150" r="7" fill="#e8c98a"/></svg>
-        <span class="arrow">→</span><h3>Juttis</h3><p>Hand-tooled leather</p>
-      </a>
-    </div>
-  </div>
-</section>
-
-<!-- ═══ SCRUB 2 · CRAFT ═══ -->
-<section id="craft" class="scrub">
+<!-- ═══ MEN · 3D product scroll ═══ -->
+<section id="men" class="scrub">
   <div class="stage">
+    <span class="section-badge">Men · The Festive Edit</span>
     <canvas></canvas>
     <div class="overlay">
-      <div data-in="0" data-out="0.3">
-        <p class="kicker">The Craft</p>
-        <h2>Zari, threaded<br>by hand</h2>
-        <p>Real gold-wrapped thread, worked petal by petal into the weave.</p>
+      <div data-in="0" data-out="0.18">
+        <p class="kicker">Men</p>
+        <h2>Cut from<br>quieter cloth</h2>
+        <p>Scroll to walk the collection.</p>
       </div>
-      <div data-in="0.36" data-out="0.64">
-        <h2>One motif.<br>Eleven days.</h2>
-        <p>A single Banarasi butta can take a master weaver most of a fortnight.</p>
+      <div class="product-card pos-right" data-in="0.24" data-out="0.44">
+        <span class="tag">Bestseller</span>
+        <h3>Sandstone Linen Kurta</h3>
+        <p class="desc">Stone-washed handloom linen. Sharp enough for the boardroom mehendi.</p>
+        <div class="row"><span class="price">₹2,190</span>
+          <button class="add-btn" data-name="Sandstone Linen Kurta">Add to Bag</button></div>
       </div>
-      <div data-in="0.7" data-out="1">
-        <h2>Made once.<br>Kept forever.</h2>
-        <p>Heirloom-grade construction, meant to be handed down — not thrown away.</p>
+      <div class="product-card pos-left" data-in="0.5" data-out="0.7">
+        <span class="tag">Occasion</span>
+        <h3>Midnight Bandhgala</h3>
+        <p class="desc">Structured raw silk, antique-gold buttons. The photograph piece.</p>
+        <div class="row"><span class="price"><s>₹6,190</s>₹4,890</span>
+          <button class="add-btn" data-name="Midnight Bandhgala">Add to Bag</button></div>
+      </div>
+      <div class="product-card pos-right" data-in="0.76" data-out="1">
+        <span class="tag">Daily wear</span>
+        <h3>Handloom Cotton Shirt</h3>
+        <p class="desc">Selvedge khadi, coconut-shell buttons. Everyday ethnic, zero effort.</p>
+        <div class="row"><span class="price">₹1,890</span>
+          <button class="add-btn" data-name="Handloom Cotton Shirt">Add to Bag</button></div>
       </div>
     </div>
   </div>
 </section>
 
-<!-- ═══ ATELIER PILLARS ═══ -->
+<!-- ═══ KIDS ═══ -->
+<section id="kids" class="content" style="background: var(--cream-soft)">
+  <div class="wrap">
+    <p class="eyebrow reveal">Kids</p>
+    <h2 class="reveal d1">Little drapes, big moments</h2>
+    <div class="kids-split">
+      <div class="kids-visual reveal" id="kidsVisual">
+        <svg viewBox="0 0 640 440"><rect width="640" height="440" fill="#e9dcc0"/>
+          <circle cx="240" cy="170" r="52" fill="none" stroke="#a63c06" stroke-width="2.5"/>
+          <path d="M240 222 L190 380 h100z" fill="none" stroke="#a63c06" stroke-width="2.5"/>
+          <circle cx="400" cy="185" r="44" fill="none" stroke="#c99a4e" stroke-width="2.5"/>
+          <path d="M400 229 l-40 130 h80z" fill="none" stroke="#c99a4e" stroke-width="2.5"/>
+          <path d="M120 80q80 40 160 0t160 0t80 0" fill="none" stroke="#c99a4e" stroke-width="1.6"/></svg>
+      </div>
+      <div>
+        <p class="lede reveal d1">Soft-as-anything mul cotton, no scratchy zari linings, and hems built
+          to be let down as they grow. Festive wear they’ll actually want to stay in.</p>
+        <div class="mini-products">
+          <div class="mini-product reveal d1">
+            <div><h4>Gulaal Mini Lehenga Set</h4><small>2–10 yrs · peach &amp; gold</small></div>
+            <span class="price">₹1,990</span>
+            <button class="add-btn" data-name="Gulaal Mini Lehenga Set">Add</button>
+          </div>
+          <div class="mini-product reveal d2">
+            <div><h4>Chotu Nehru Jacket Set</h4><small>2–12 yrs · cream &amp; rust</small></div>
+            <span class="price">₹1,690</span>
+            <button class="add-btn" data-name="Chotu Nehru Jacket Set">Add</button>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ═══ PROMISE ═══ -->
 <section id="atelier" class="content">
   <div class="wrap">
     <p class="eyebrow reveal">The Atelier Promise</p>
@@ -133,59 +246,66 @@
     <div class="pillars">
       <div class="pillar reveal"><span class="num">01</span>
         <h3>Handwoven, certified</h3>
-        <p>Every piece carries the Handloom Mark and the name of the cluster that wove it.</p>
-      </div>
+        <p>Every piece carries the Handloom Mark and the name of the cluster that wove it.</p></div>
       <div class="pillar reveal d1"><span class="num">02</span>
         <h3>Natural dyes only</h3>
-        <p>Turmeric, madder root, pomegranate rind and indigo — kind to skin and river alike.</p>
-      </div>
+        <p>Turmeric, madder root, pomegranate rind and indigo — kind to skin and river alike.</p></div>
       <div class="pillar reveal d2"><span class="num">03</span>
         <h3>Made to measure</h3>
-        <p>Complimentary tailoring on every festive piece, fitted to you within five days.</p>
-      </div>
+        <p>Complimentary tailoring on every festive piece, fitted to you within five days.</p></div>
+    </div>
+    <div class="quotes">
+      <div class="quote reveal"><div class="stars">★★★★★</div>
+        <p>“Wore the Sunehri Anarkali from morning pooja straight to the reception. Not one crease, endless compliments.”</p>
+        <footer>Meera K. · Bengaluru</footer></div>
+      <div class="quote reveal d1"><div class="stars">★★★★★</div>
+        <p>“The linen kurta is the first ethnic piece my husband reaches for without being asked.”</p>
+        <footer>Anushka R. · Pune</footer></div>
+      <div class="quote reveal d2"><div class="stars">★★★★★</div>
+        <p>“Tailoring arrived in four days, fit like it was grown on me. This is how ethnic wear should be sold.”</p>
+        <footer>Devika S. · Delhi</footer></div>
     </div>
   </div>
 </section>
 
 <!-- ═══ FINALE ═══ -->
-<section class="finale content">
+<section id="finale" class="finale content">
   <div class="wrap">
     <p class="eyebrow reveal">The Festive Edit ’26</p>
     <h2 class="reveal d1">Wear the tradition.<br>Own the moment.</h2>
-    <p class="reveal d2">New arrivals land every Thursday. First fitting is on us.</p>
-    <span class="reveal d3"><a class="btn" href="#collections">Explore the Collection</a>
-    <a class="btn ghost" href="#story">Meet the Weavers</a></span>
+    <p class="reveal d2">New arrivals every Thursday. First fitting on us. Join the list for early access.</p>
+    <form class="newsletter reveal d3" onsubmit="return vastraSubscribe(event)">
+      <input type="email" required placeholder="you@example.com" aria-label="Email">
+      <button class="btn" type="submit">Get Early Access</button>
+    </form>
   </div>
 </section>
 
-<footer>
+<footer class="site">
   <div class="wrap">
     <span class="logo">vastra</span>
     <nav>
-      <a href="#story">Story</a><a href="#collections">Collections</a>
-      <a href="#craft">Craft</a><a href="#atelier">Atelier</a>
+      <a href="#women">Women</a><a href="#men">Men</a><a href="#kids">Kids</a>
+      <a href="#story">Story</a><a href="#atelier">Atelier</a>
     </nav>
     <small>© 2026 Vastra · Woven in India · hello@vastra.in</small>
   </div>
 </footer>
 
+<div class="toast" id="toast"></div>
+
 <script>
   // One entry per cinematic clip. The engine skips sections whose element is missing.
   window.SCRUB_SECTIONS = [
-    {
-      section: "#hero",
-      frameCount: 160,
-      bg: "#1f120a",
-      framePath: function (i) { return "frames/hero/frame_" + String(i).padStart(4, "0") + ".jpg"; }
-    },
-    {
-      section: "#craft",
-      frameCount: 160,
-      bg: "#26100c",
-      framePath: function (i) { return "frames/zari/frame_" + String(i).padStart(4, "0") + ".jpg"; }
-    }
+    { section: "#opening", frameCount: 219, bg: "#1f120a",
+      framePath: function (i) { return "frames/opening/frame_" + String(i).padStart(4, "0") + ".jpg"; } },
+    { section: "#women", frameCount: 160, bg: "#1f120a",
+      framePath: function (i) { return "frames/women/frame_" + String(i).padStart(4, "0") + ".jpg"; } },
+    { section: "#men", frameCount: 160, bg: "#26100c",
+      framePath: function (i) { return "frames/men/frame_" + String(i).padStart(4, "0") + ".jpg"; } }
   ];
 </script>
 <script src="scroll-cinematic.js"></script>
+<script src="app.js"></script>
 </body>
 </html>
